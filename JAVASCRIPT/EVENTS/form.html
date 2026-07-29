@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+
+    <style>
+        .form{
+            display:flex;
+            flex-direction:column;
+            gap:12px;
+        }
+        .input{
+            padding:10px;
+            font-size:16px;
+        }
+        #button{
+            padding:10px;
+            background:royalblue;
+            color:white;
+            border:none;
+            cursor:pointer;
+            font-size:16px;
+        }
+
+        #message{
+            margin-top:15px;
+            text-align:center;
+            font-weight:bold;
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <h2>Registration Form</h2>
+
+    <form id="appForm" class="form">
+
+        <input
+            type="text"
+            id="firstname"
+            class="input"
+            placeholder="First Name"
+        >
+
+        <input
+            type="text"
+            id="lastname"
+            class="input"
+            placeholder="Last Name"
+        >
+
+        <input
+            type="number"
+            id="age"
+            class="input"
+            placeholder="Age"
+        >
+
+        <input
+            type="text"
+            id="phone"
+            class="input"
+            placeholder="Phone Number"
+        >
+
+        <input
+            type="text"
+            id="place"
+            class="input"
+            placeholder="Place"
+        >
+
+        <input
+            type="submit"
+            value="Register"
+            id="button"
+        >
+
+    </form>
+
+    <p id="message"></p>
+
+</div>
+
+<script>
+
+const form = document.getElementById("appForm");
+const firstName = document.getElementById("firstname");
+const lastName = document.getElementById("lastname");
+const age = document.getElementById("age");
+const phone = document.getElementById("phone");
+const place = document.getElementById("place");
+const message = document.getElementById("message");
+
+form.addEventListener("submit", function(event){
+
+    event.preventDefault();
+
+    const fname = firstName.value.trim();
+    const lname = lastName.value.trim();
+    const userAge = age.value.trim();
+    const userPhone = phone.value.trim();
+    const userPlace = place.value.trim();
+
+    if(fname === ""){
+        message.style.color = "red";
+        message.textContent = "First Name is required";
+        return;
+    }
+
+    if(lname === ""){
+        message.style.color = "red";
+        message.textContent = "Last Name is required";
+        return;
+    }
+
+    if(userAge === ""){
+        message.style.color = "red";
+        message.textContent = "Age is required";
+        return;
+    }
+
+    if(userAge < 18){
+        message.style.color = "red";
+        message.textContent = "Age must be 18 or above";
+        return;
+    }
+
+    if(userPhone === ""){
+        message.style.color = "red";
+        message.textContent = "Phone Number is required";
+        return;
+    }
+
+    if(userPhone.length !== 10){
+        message.style.color = "red";
+        message.textContent = "Phone Number must contain 10 digits";
+        return;
+    }
+
+    if(userPlace === ""){
+        message.style.color = "red";
+        message.textContent = "Place is required";
+        return;
+    }
+
+    message.style.color = "green";
+    message.textContent = "Registration Successful!";
+
+
+});
+
+</script>
+
+</body>
+</html>

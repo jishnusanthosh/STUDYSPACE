@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="operatorOutput"></p>
+    <p id="conditionOutput"></p>
+
+    <script>
+      //   let num = 10;
+      //   let num2 = 5;
+
+      //   let sum = num + num2;
+      //   let product = num * num2;
+      //   let isGreater = num > num2;
+
+      //   document.getElementById("operatorOutput").innerHTML =
+      //     "sum =" + sum + " product =" + product + " isGreater =" + isGreater;
+
+      let marks = 76;
+      let result = "";
+
+      if (marks >= 89) {
+        result = "Excellent";
+      } else if (marks >= 50) {
+        result = "Good Job";
+      } else {
+        result = "Need Improvement";
+      }
+
+      document.getElementById("conditionOutput").innerHTML =
+        "Your Marks: " + marks + " -> " + result;
+    </script>
+  </body>
+</html>

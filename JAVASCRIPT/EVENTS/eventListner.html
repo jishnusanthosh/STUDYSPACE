@@ -1,0 +1,110 @@
+<!-- <!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="btn">click me</button>
+
+    <script>
+      let button = document.getElementById("btn");
+
+      button.addEventListener("click", () => {
+        console.log("Button clicked");
+      });
+    </script>
+  </body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Text</title>
+</head>
+<body>
+
+    <p id="text">hello</p>
+    <button id="changebtn">Click Me</button>
+
+    <script>
+        let word = document.getElementById("text");
+        let button = document.getElementById("changebtn");
+
+        button.addEventListener("click", () => {
+            word.innerHTML = "Welcome";
+        });
+    </script>
+
+</body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Event</title>
+</head>
+<body>
+
+    <input type="text" id="username" placeholder="Type here">
+    <p id="output"></p>
+
+    <script>
+
+        let output = document.getElementById("output");
+        let username = document.getElementById("username");
+
+        username.addEventListener("input", () => {
+            output.innerText = username.value;
+        });
+
+    </script>
+
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<form id="myForm">
+    <input type="text" id="name">
+    <button>Submit</button>
+</form>
+
+<p id="alert"></p>
+
+<script>
+const form = document.getElementById("myForm");
+const nameInput = document.getElementById("name");
+const message = document.getElementById("alert");
+
+form.addEventListener("submit", function(event){
+
+    event.preventDefault();
+
+    if(nameInput.value.trim() === ""){
+        message.textContent = "Please enter your name.";
+        message.style.color = "red";
+    }else{
+        message.textContent = "Form submitted successfully!";
+        message.style.color = "green";
+    }
+
+});
+</script>
+
+</body>
+</html>

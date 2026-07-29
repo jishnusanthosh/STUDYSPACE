@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="heading">Welcome</p>
+    <div id="box">
+        this is a box
+    </div>
+    <button id="btn">CLick me</button>
+
+
+    <script>
+        let heading=document.getElementById('heading')
+        console.log(heading.textContent)
+
+        heading.textContent='hello world'
+        heading.innerHTML="<u>hello world</u>"
+
+        let box=document.getElementById('box')
+        box.style.backgroundColor='blue'
+        box.style.border='2px solid red'
+
+
+        let button=document.getElementById('btn')
+        button.onclick=()=>{
+            alert('clicked')
+
+        }
+
+    </script>
+
+</body>
+</html>

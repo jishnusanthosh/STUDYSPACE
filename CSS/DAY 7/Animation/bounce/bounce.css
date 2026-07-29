@@ -1,0 +1,23 @@
+.box{
+    height: 50px;
+    width: 50px;
+    color: aqua;
+    background-color: aqua;
+}
+.load{
+    display: flex;
+    
+}
+
+@keyframes bounce{
+    0%{
+        transform: translate(0,0);
+    }
+    50%{
+        transform: translate(0,100px);
+    }
+}
+
+.box{
+    animation: bounce 3s  infinite ;
+}

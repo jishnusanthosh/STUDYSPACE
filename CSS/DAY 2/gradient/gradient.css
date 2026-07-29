@@ -1,0 +1,31 @@
+.linear{
+    background:linear-gradient(30deg,rgb(100, 186, 38),blue,red);
+    height: 100px;
+    margin-top: 10px;
+    text-align: center;
+    color: aliceblue;
+    padding: 20px;
+
+}
+.radial{
+    background:radial-gradient(circle,orange,purple);
+    height: 100px;
+    margin-top: 10px;
+    text-align: center;
+    color: aliceblue;
+    padding: 20px;
+}
+.shadow{
+    background-color: aqua;
+    height: 100px;
+    margin-top: 10px;
+    text-align: center;
+    color: rgb(8, 17, 26);
+    padding: 20px;
+    box-shadow: 10px 8px 10px rgb(80, rgb(70, 151, 70),1);
+    
+}
+.text{
+    color: blue;
+    text-shadow:2px 2px 2px rgb(196, 24, 47);
+}

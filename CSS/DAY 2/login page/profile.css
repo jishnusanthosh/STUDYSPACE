@@ -1,0 +1,26 @@
+body{
+    background: #eeeeee;
+    font-family: Arial, sans-serif;
+}
+
+.card{
+    width: 350px;
+    background: white;
+    text-align: center;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.15);
+}
+
+.card img{
+   
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #00aaff;
+}
+
+
+.card p{
+    color: gray;
+    font-size: 24px;
+}

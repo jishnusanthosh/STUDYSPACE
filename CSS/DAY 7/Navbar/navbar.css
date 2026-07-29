@@ -1,0 +1,292 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(40, 20, 228);
+    color: white;
+    padding: 15px 20px;
+}
+
+.menu-div {
+    position: relative;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+.menu li {
+    cursor: pointer;
+    padding: 5px;
+}
+.menu li:hover {
+    color: rgb(225, 53, 0);
+}
+
+.hamburger {
+    display: none;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.content {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+
+@media (max-width: 1024px) {
+    .hamburger {
+        display: block;
+    }
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+
+        width: 200px;
+        background-color: rgb(40, 20, 228);
+        border-radius: 5px;
+        gap: 0;
+    }
+    .menu li {
+        padding: 15px;
+    
+    }
+
+    .menu li:last-child {
+        border-bottom: none;
+    }
+
+    .menu-div:hover .menu {
+        display: flex;
+    }
+}
+
+
+@media (max-width: 767px) {
+
+    .container {
+        padding: 12px 15px;
+    }
+    .content h1 {
+        font-size: 24px;
+    }
+
+    .content p {
+        font-size: 14px;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  
+
+    .hamburger {
+        font-size: 35px;
+    }
+}
+
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+
+    .menu {
+        gap: 30px;
+    }
+}
+
+/* =========================
+   Large Desktop
+========================= */
+
+@media (min-width: 1441px) {
+
+    .container {
+        padding: 20px 50px;
+    }
+
+    .menu {
+        gap: 40px;
+    }
+
+    .content h1 {
+        font-size: 42px;
+    }
+
+    .content p {
+        font-size: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Mobile */
+@media (max-width: 576px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 35px;
+    right: 0;
+    background-color: rgb(25, 11, 230);
+    padding: 10px;
+  }
+
+  .menu-div:hover .menu {
+    display: flex;
+  }
+
+  .menu li {
+    padding: 5px 0;
+  }
+  .hamburger {
+    display: block;
+  }
+}

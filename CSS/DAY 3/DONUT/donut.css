@@ -1,0 +1,51 @@
+body {
+  background: linear-gradient(to bottom, #d4ab26, #f7b08a);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.heading h1 {
+  color: #183153;
+  font-size: 48px;
+  margin-bottom: 40px;
+   text-shadow: 1px 1px 2px rgb(255, 255, 255);
+}
+.image img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+.card {
+  width: 450px;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 25 rgba(0, 0, 0, 0.2);
+}
+.content {
+  text-align: center;
+  padding: 30px;
+}
+.content h3 {
+  font-size: 40px;
+  color: #e17f4a;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 1px rgb(37, 33, 34);
+}
+.content p {
+  color: #183153;
+  font-size: 22px;
+}
+.content button {
+  background: #e67639;
+  border: none;
+  color: white;
+
+  padding: 10px 25px;
+  border-radius: 30px;
+}
+.content button:hover {
+  background: #183153;
+}

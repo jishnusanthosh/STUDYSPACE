@@ -1,0 +1,41 @@
+
+@keyframes colorChange{
+    0%{
+       background-color: aqua;
+    }
+    100%{
+        background-color: brown;
+    }
+
+   
+
+}
+@keyframes h1color{
+    0%{
+       background-color: rgb(25, 37, 214);
+    }
+    100%{
+        background-color: rgb(13, 195, 47);
+    }
+
+   
+
+}
+.anime{
+     animation-name: colorChange;
+
+     animation-duration: 3s;
+
+     animation-iteration-count: infinite;
+
+     animation-direction: alternate;
+}
+h1{
+       animation-name: h1color;
+
+     animation-duration: 3s;
+
+     animation-iteration-count: infinite;
+
+     animation-direction: alternate;
+}
