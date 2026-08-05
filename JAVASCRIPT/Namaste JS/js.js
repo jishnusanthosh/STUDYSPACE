@@ -169,3 +169,21 @@
 // console.log(a == c);   // true
 // console.log(a === c);  // true
 
+// const obj={
+//     a:10,
+//     b:20,
+//     c:{
+//         a:70,
+//         b:40,
+//     }
+
+// }
+// const{a,b,c:{a:d}}=obj
+// console.log(a,b,d);
+// console.log(obj.c);
+
+// let arr=[1,3,4,5,6,7]
+// let aray=arr.map((e)=>e>2)
+// console.log(aray);
+
+
