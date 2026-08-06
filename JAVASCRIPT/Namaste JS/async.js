@@ -48,38 +48,38 @@
 // loginuser("ali",showdashboard)
 
 
-function placeorder(item,callback) {
-    console.log("placing orer for" + item + "...");
-    setTimeout(() => {
-        console.log("order placed");
-        callback(item)
-    }, 2000);
+// function placeorder(item,callback) {
+//     console.log("placing orer for" + item + "...");
+//     setTimeout(() => {
+//         console.log("order placed");
+//         callback(item)
+//     }, 2000);
     
 
 
-}
+// }
 
-function shiporder(item,callback) {
-    console.log("shipping" + item + "..")
+// function shiporder(item,callback) {
+//     console.log("shipping" + item + "..")
 
-    setTimeout(() => {
-        console.log("order shippped");
-        callback(item)
+//     setTimeout(() => {
+//         console.log("order shippped");
+//         callback(item)
         
-    }, 2000);
+//     }, 2000);
     
-}
+// }
 
-function deliverOrder(item) {
-    console.log(item +"dellvered to your door");
+// function deliverOrder(item) {
+//     console.log(item +"dellvered to your door");
     
-}
+// }
 
-placeorder("laptop ",function(item)
-{
+// placeorder("laptop ",function(item)
+// {
 
-    shiporder(item,function(item)
-    {
-        deliverOrder(item)
-    })
-})
+//     shiporder(item,function(item)
+//     {
+//         deliverOrder(item)
+//     })
+// })
