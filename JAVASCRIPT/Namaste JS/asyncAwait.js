@@ -1,12 +1,12 @@
 
-const p=new Promise((res,rej)=>{
-    res("promise resolved valuse")
-})
+// const p=new Promise((res,rej)=>{
+//     res("promise resolved valuse")
+// })
 
-async function getdata() {
-    return p;
-}
+// async function getdata() {
+//     return p;
+// }
 
-const dataPromise=getdata()
+// const dataPromise=getdata()
 
-dataPromise.then((res) => console.log(res));
+// dataPromise.then((res) => console.log(res));

@@ -79,10 +79,11 @@
 // }
 
 
-try {
-  setTimeout(() => {
-    throw new Error("Oops");
-  }, 3000);
-} catch (err) {
-  console.log("Caught:", err.message); // Never runs
-}
+// try {
+//   setTimeout(() => {
+//     throw new Error("Oops");
+//   }, 3000);
+// } catch (err) {
+//   console.log("Caught:", err.message); // Never runs
+// }
+
