@@ -1,19 +1,22 @@
-const users = [
-  {
-    id: 1,
-    name: "Jishnu",
-    age: 28,
-  },
-  {
-    id: 2,
-    name: "Arun",
-    age: 25,
-  },
-  {
-    id: 3,
-    name: "Rahul",
-    age: 30,
-  },
-];
+import mongoose from "mongoose";
 
-export default users;
+const userSchema = new mongoose.Schema({
+  id: {
+    type: Number,
+    required: true,
+  },
+
+  name: {
+    type: String,
+    required: true,
+  },
+
+  age: {
+    type: Number,
+    required: true,
+  },
+});
+
+const User = mongoose.model("User", userSchema);
+
+export default User;
