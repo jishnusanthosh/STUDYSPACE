@@ -5,8 +5,16 @@ export function getUsers(req, res) {
   res.status(200).json(User);
 }
 
-export async function createUser(req, res) {
-  const user = await User.collection.insertOne(req.body);
 
-  res.status(201).json(user);
-}
+export async function createUser(req, res) {
+  try {
+    const userdata = new User(req.body);
+
+    await userdata.save();
+
+    res.status(201).json(userdata);
+  } catch (error) {
+   console.log(error);
+   
+    }
+  }
