@@ -41,11 +41,16 @@ app.get("/register", (req, res) => {
 });
 
 
-// Home
+// Home page
+app.get("/home", (req, res) => {
+    res.sendFile(path.join(frontendPath, "pages", "home.html"));
+});
+
+
+// Root
 app.get("/", (req, res) => {
     res.redirect("/login");
 });
-
 
 app.listen(PORT, () => {
     console.log(`Server running at http://localhost:${PORT}`);

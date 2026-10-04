@@ -1,52 +1,111 @@
+
 const registerForm = document.getElementById("registerForm");
+const loginForm = document.getElementById("loginForm");
+
+
+/* =========================
+   REGISTER
+========================= */
 
 if (registerForm) {
-  registerForm.addEventListener("submit", async (event) => {
-    event.preventDefault();
+    registerForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
 
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const password = document.getElementById("password").value.trim();
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const password = document.getElementById("password").value.trim();
 
-    const userData = {
-      name,
-      email,
-      password,
-    };
-  });
+        const userData = {
+            name,
+            email,
+            password,
+        };
 
-  try {
-    const response = await fetch("http://localhost:3000/api/register",{
-      method: "POST",
+        try {
+            const response = await fetch("/api/register", {
+                method: "POST",
 
-      headers: {
-        "Content-Type": "application/json",
-      },
+                headers: {
+                    "Content-Type": "application/json",
+                },
 
-      body:JSON.stringify()(userData),
+                body: JSON.stringify(userData),
+            });
+
+            const data = await response.json();
+
+            console.log("Register response:", data);
+
+            if (!response.ok) {
+                alert(data.message || "Registration failed");
+                return;
+            }
+
+            alert("Registration successful");
+
+            registerForm.reset();
+
+            window.location.href = "/login";
+
+        } catch (error) {
+            console.error("Register error:", error);
+
+            alert("Unable to connect to server");
+        }
     });
-
-    const data = await response.json();
-
-    console.log("register response", data);
-
- if (!response.ok) {
-    alert(data.message|| "registration failed")
-    return
-    
- }
+}
 
 
- alert("Registrarion successful")
+/* =========================
+   LOGIN
+========================= */
 
- registerForm.reset()
+if (loginForm) {
+    loginForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
 
- window.location.href="../pages/login.html"
+        const email = document.getElementById("email").value.trim();
+        const password = document.getElementById("password").value.trim();
 
-  } catch (error) {
+        const loginData = {
+            email,
+            password,
+        };
 
-    console.log("register error",error);
-    
-    alert(" Unable to connect to server")
-  }
+        try {
+            const response = await fetch("/api/login", {
+                method: "POST",
+
+                headers: {
+                    "Content-Type": "application/json",
+                },
+
+                body: JSON.stringify(loginData),
+            });
+
+            const data = await response.json();
+
+            console.log("Login response:", data);
+
+            if (!response.ok) {
+                alert(data.message || "Login failed");
+                return;
+            }
+
+            // Store logged-in user
+            localStorage.setItem(
+                "user",
+                JSON.stringify(data.user)
+            );
+
+            alert("Login successful");
+
+            window.location.href = "/home";
+
+        } catch (error) {
+            console.error("Login error:", error);
+
+            alert("Unable to connect to server");
+        }
+    });
 }

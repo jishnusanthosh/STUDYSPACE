@@ -1,39 +1,63 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>DevVault - Dashboard</title>
+
     <link rel="stylesheet" href="../css/home.css">
 </head>
+
 <body>
 
     <header class="navbar">
-        <div class="logo">DevVault</div>
+
+        <div class="logo">
+            DevVault
+        </div>
 
         <nav>
             <a href="#" class="active">Home</a>
             <a href="#">My Snippet</a>
             <a href="#">Profile</a>
-            <button class="logout-btn">Logout</button>
+
+            <button type="button" class="logout-btn">
+                Logout
+            </button>
         </nav>
+
     </header>
+
 
     <main class="container">
 
+        <!-- Welcome Section -->
+
         <section class="welcome">
+
             <div>
-                <p class="small-text">WELCOME BACK 👋</p>
+                <p class="small-text">
+                    WELCOME BACK 👋
+                </p>
             </div>
+
         </section>
+
+
+        <!-- Create Note Section -->
 
         <section class="note-section">
 
             <div class="section-header">
+
                 <div>
                     <h2>Create a Note</h2>
                 </div>
+
             </div>
+
 
             <div class="note-form">
 
@@ -43,47 +67,82 @@
                     class="note-title"
                 >
 
+
                 <textarea
                     placeholder="Write your note here..."
                     class="note-content"
                 ></textarea>
 
+
                 <div class="form-bottom">
-                    <button class="add-btn">+ Add Note</button>
+
+                    <button
+                        type="button"
+                        class="add-btn"
+                    >
+                        + Add Note
+                    </button>
+
                 </div>
 
             </div>
 
         </section>
 
+
+        <!-- Notes Section -->
+
         <section class="notes-section">
 
             <div class="section-header">
+
                 <div>
-                    <h2>My Notes</h2>
-                    <p>Your recently created notes.</p>
+
+                    <h2>
+                        My Notes
+                    </h2>
+
+                    <p>
+                        Your recently created notes.
+                    </p>
+
                 </div>
 
-                <span class="note-count">3 Notes</span>
+
+                <span class="note-count">
+                    1 Note
+                </span>
+
             </div>
+
 
             <div class="notes-grid">
 
                 <article class="note-card">
+
                     <div class="note-card-header">
-                        <h3>Learn JavaScript</h3>
-                        <button>⋮</button>
+
+                        <h3>
+                            Learn JavaScript
+                        </h3>
+
+                        <button type="button">
+                            ⋮
+                        </button>
+
                     </div>
+
 
                     <p>
                         Study closures, promises, async/await and the event loop.
                     </p>
 
-                    <span class="date">October 2, 2026</span>
+
+                    <span class="date">
+                        October 2, 2026
+                    </span>
+
                 </article>
-
-
-             
 
             </div>
 
@@ -92,6 +151,9 @@
     </main>
 
 
+    <!-- Dashboard JavaScript -->
+
+    <script src="../javascript/home.js"></script>
 
 </body>
 </html>
