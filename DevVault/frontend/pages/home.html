@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevVault - Dashboard</title>
+    <link rel="stylesheet" href="../css/home.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">DevVault</div>
+
+        <nav>
+            <a href="#" class="active">Home</a>
+            <a href="#">My Snippet</a>
+            <a href="#">Profile</a>
+            <button class="logout-btn">Logout</button>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <section class="welcome">
+            <div>
+                <p class="small-text">WELCOME BACK 👋</p>
+            </div>
+        </section>
+
+        <section class="note-section">
+
+            <div class="section-header">
+                <div>
+                    <h2>Create a Note</h2>
+                </div>
+            </div>
+
+            <div class="note-form">
+
+                <input
+                    type="text"
+                    placeholder="Note title..."
+                    class="note-title"
+                >
+
+                <textarea
+                    placeholder="Write your note here..."
+                    class="note-content"
+                ></textarea>
+
+                <div class="form-bottom">
+                    <button class="add-btn">+ Add Note</button>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="notes-section">
+
+            <div class="section-header">
+                <div>
+                    <h2>My Notes</h2>
+                    <p>Your recently created notes.</p>
+                </div>
+
+                <span class="note-count">3 Notes</span>
+            </div>
+
+            <div class="notes-grid">
+
+                <article class="note-card">
+                    <div class="note-card-header">
+                        <h3>Learn JavaScript</h3>
+                        <button>⋮</button>
+                    </div>
+
+                    <p>
+                        Study closures, promises, async/await and the event loop.
+                    </p>
+
+                    <span class="date">October 2, 2026</span>
+                </article>
+
+
+             
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+</body>
+</html>

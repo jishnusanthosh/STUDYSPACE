@@ -1,0 +1,344 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(../images/home.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Navbar */
+
+.navbar {
+    height: 70px;
+    background: #ffffff;
+    border-bottom: 1px solid #e2e7e4;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #000000;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #010703;
+    font-size: 15px;
+}
+
+nav a:hover,
+nav a.active {
+    color: #000000;
+}
+
+.logout-btn {
+    border: 1px solid #d9dfdc;
+    background: rgb(225, 95, 95);
+    color: #ebe4e4;
+    padding: 9px 18px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.logout-btn:hover {
+    background: #d1893c;
+}
+
+/* Main */
+
+.container {
+    width: 86%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Welcome */
+
+.welcome {
+    margin-top: 50px;
+    background: #e1e6e4;
+    color: rgb(0, 0, 0);
+    border-radius: 18px;
+
+    padding: 45px;
+}
+
+.small-text {
+    color: #000000;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+}
+
+.welcome h1 {
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.description {
+    max-width: 600px;
+    color: #f7faf8;
+    line-height: 1.7;
+}
+
+/* Sections */
+
+.note-section,
+.notes-section {
+    margin-top: 45px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.section-header h2 {
+    font-size: 24px;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.section-header p {
+    color: #f4fbf7;
+    font-size: 14px;
+}
+
+/* Note Form */
+
+.note-form {
+    background: white;
+    border: 1px solid #e1e6e3;
+    border-radius: 14px;
+    padding: 22px;
+}
+
+.note-title {
+    width: 100%;
+    border: none;
+    outline: none;
+
+    font-size: 20px;
+    font-weight: 600;
+
+    margin-bottom: 15px;
+}
+
+.note-content {
+    width: 100%;
+    min-height: 130px;
+
+    resize: vertical;
+
+    border: none;
+    outline: none;
+
+    font-family: inherit;
+    font-size: 15px;
+    line-height: 1.6;
+
+    color: #fff4f4;
+}
+
+.note-title::placeholder,
+.note-content::placeholder {
+    color: #a4aaa7;
+}
+
+.form-bottom {
+    border-top: 1px solid #edf0ee;
+
+    margin-top: 15px;
+    padding-top: 15px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-bottom span {
+    color: #9aa19e;
+    font-size: 13px;
+}
+
+.add-btn {
+    border: none;
+    background: #137a4b;
+    color: white;
+
+    padding: 11px 20px;
+
+    border-radius: 7px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.add-btn:hover {
+    background: #0f653e;
+}
+
+/* Notes */
+
+.notes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.note-card {
+    background: white;
+    border: 1px solid #e1e6e3;
+    border-radius: 14px;
+
+    padding: 22px;
+
+    min-height: 190px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.note-card:hover {
+    border-color: #b8cfc2;
+    transform: translateY(-2px);
+    transition: 0.2s;
+}
+
+.note-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 15px;
+}
+
+.note-card h3 {
+    font-size: 18px;
+}
+
+.note-card-header button {
+    border: none;
+    background: transparent;
+    font-size: 22px;
+    color: #777;
+    cursor: pointer;
+}
+
+.note-card p {
+    color: #000000;
+    font-size: 14px;
+    line-height: 1.7;
+
+    flex: 1;
+}
+
+.date {
+    color: #9aa19e;
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+/* Note count */
+
+.note-count {
+    background: #e5f3eb;
+    color: #137a4b;
+
+    padding: 7px 12px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+
+@media (max-width: 800px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    nav a {
+        display: none;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    .welcome {
+        padding: 30px;
+    }
+
+    .welcome h1 {
+        font-size: 30px;
+    }
+
+    .notes-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .navbar {
+        height: 60px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .logout-btn {
+        padding: 8px 12px;
+    }
+
+    .welcome {
+        margin-top: 25px;
+        padding: 25px;
+    }
+
+    .welcome h1 {
+        font-size: 26px;
+    }
+
+    .form-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .add-btn {
+        width: 100%;
+    }
+}
