@@ -1,0 +1,57 @@
+.hero {
+  min-height: 500px;
+  background-color: #0a0a0a;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 50px;
+  gap: 40px;
+}
+
+
+.hero-content h1 {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 18px;
+  color: #bbbbbb;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.hero-content button {
+  padding: 12px 25px;
+  background-color: #000000;
+  color: rgb(231, 179, 179);
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+.hero-image {
+  width: 45%;
+}
+
+.hero-image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.course-links{
+    display: flex;
+ 
+  
+    flex-direction: column;
+}
+.course-links a {
+    text-decoration: none;
+    color: white;
+    margin-top: 10px;
+}
