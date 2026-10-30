@@ -1,11 +1,19 @@
+
 import './App.css'
 import Home from './Pages/Home'
-function App() {
+import About from './Pages/About'
+import Services from './Pages/Services'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
+function App() {
   return (
-  <div>
-    <Home></Home>
-  </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Services />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 

@@ -1,0 +1,37 @@
+import { useDispatch } from "react-redux";
+
+import { addToCart } from "../features/cart/cartSlice";
+
+import { products } from "../data/products";
+
+function ProductList() {
+  const dispatch = useDispatch();
+
+  const handleAddToCart = (product) => {
+    dispatch(addToCart(product));
+  };
+
+  return (
+    <div className="section">
+      <h2>Available Products</h2>
+
+      <div className="product-grid">
+        {products.map((product) => (
+          <div className="product-card" key={product.id}>
+          
+
+            <h3>{product.name}</h3>
+
+            <p>₹{product.price.toLocaleString("en-IN")}</p>
+
+            <button onClick={() => handleAddToCart(product)}>
+              Add to Cart
+            </button>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export default ProductList;
