@@ -1,26 +1,14 @@
-import { useState } from 'react'
+import Login from "./login/login";
 
 
-function App() {
-  const [form, setForm] = useState({
-    email:"",
-    password:""
-  })
-
-  const 
-
-
-
-
-
-
-  return (
-    <>
-      <div>
-        welcome
-      </div>
-    </>
-  )
+function App(){
+return(
+   <div>
+    <Login/>
+  </div>
+ )
 }
-
 export default App
+
+
+
