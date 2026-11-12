@@ -4,41 +4,94 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./dist.css" />
   </head>
-  <body>
-    <main>
-      <div class="navbar">
-        <h2 class="logo">Coding Nepal</h2>
+  <body class="bg-black text-white">
+    <header class="bg-black">
+      <nav class="flex items-center justify-between px-6 py-5 md:px-16">
+        <!-- Logo -->
+        <h1 class="text-2xl font-bold">
+          Coding <span class="text-blue-500">Zoople</span>
+        </h1>
 
-        <div>
-          <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Services</li>
-            <li>Project</li>
-            <li>Contact</li>
+        <ul
+          class="flex flex-row gap-5 rounded-lg bg-slate-900  text-center text-gray-300 md:flex hidden "
+        >
+          <li><a href="#home" class="hover:text-blue-500">Home</a></li>
+
+          <li><a href="#about" class="hover:text-blue-500">About</a></li>
+
+          <li>
+            <a href="#services" class="hover:text-blue-500">Services</a>
+          </li>
+
+          <li>
+            <a href="#projects" class="hover:text-blue-500">Projects</a>
+          </li>
+
+          <li><a href="#contact" class="hover:text-blue-500">Contact</a></li>
+        </ul>
+
+        <!-- Mobile Menu -->
+        <details class="md:hidden">
+          <summary class="list-none cursor-pointer text-3xl text-white">
+            ☰
+          </summary>
+
+          <ul
+            class="absolute right-0 top-12 z-50 flex w-48 flex-col gap-5 rounded-lg bg-slate-900 p-6 text-center text-gray-300 shadow-lg"
+          >
+            <li><a href="#home" class="hover:text-blue-500">Home</a></li>
+
+            <li><a href="#about" class="hover:text-blue-500">About</a></li>
+
+            <li>
+              <a href="#services" class="hover:text-blue-500">Services</a>
+            </li>
+
+            <li>
+              <a href="#projects" class="hover:text-blue-500">Projects</a>
+            </li>
+
+            <li><a href="#contact" class="hover:text-blue-500">Contact</a></li>
           </ul>
-        </div>
-      </div>
+        </details>
+      </nav>
+    </header>
 
-      <div class="hero">
-        <h2 class="title">
-          Top Free Tools and Extensions to grow your business rapidly
+    <main class="min-h-screen bg-slate-950">
+      <section id="home" class="flex items-center px-6 md:px-16 py-16">
+        <div class="max-w-3xl">
+          <h1 class="text-4xl md:text-6xl font-bold mb-6">
+            Build Websites
+            <span class="text-blue-500">With Creative Ideas</span>
+          </h1>
+        </div>
+      </section>
+
+      <section class="px-6 md:px-16 py-16">
+        <h2 class="text-3xl font-bold text-center mb-10">
+          Our <span class="text-blue-500">Courses</span>
         </h2>
 
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus,
-          unde fugiat voluptatem perferendis porro rem nesciunt incidunt
-          eligendi maiores cum blanditiis ipsum praesentium magnam sed amet
-          ducimus repellat fuga distinctio?
-        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl">
+            <h3 class="text-xl font-bold mb-3 text-blue-400">React JS</h3>
+          </div>
 
-        <div">
-          <button class="button1">Free Quote</button>
-          <button class="button2">Contact Us</button>
+          <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl">
+            <h3 class="text-xl font-bold mb-3 text-green-400">MongoDB</h3>
+          </div>
+
+          <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl">
+            <h3 class="text-xl font-bold mb-3 text-yellow-300">Node JS</h3>
+          </div>
+
+          <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl">
+            <h3 class="text-xl font-bold mb-3 text-white-400">JavaScript</h3>
+          </div>
         </div>
-      </div>
+      </section>
     </main>
   </body>
 </html>

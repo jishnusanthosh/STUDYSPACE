@@ -1,10 +1,13 @@
 import Login from "./login/login";
+import Signup from "./login/signup";
 
 
 function App(){
 return(
    <div>
-    <Login/>
+    <Signup/>
+    {/* <Login/> */}
+   
   </div>
  )
 }

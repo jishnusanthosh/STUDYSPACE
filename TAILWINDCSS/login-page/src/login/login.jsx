@@ -46,7 +46,7 @@ function Login() {
           </p>
         </div>
 
-        <form onSubmit={handleSubmit} className="space-y-5">
+        {/* <form onSubmit={handleSubmit} className="space-y-5">
 
           <div>
             <label htmlFor="email" className="block text-sm mb-2">
@@ -123,14 +123,14 @@ function Login() {
             </p>
           )}
 
-        </form>
+        </form> */}
 
-        <div className="mt-8 text-center text-sm text-gray-400">
+        {/* <div className="mt-8 text-center text-sm text-gray-400">
           Don't have an account?{" "}
           <span className="text-emerald-500">
             Sign up
           </span>
-        </div>
+        </div> */}
 
       </div>
     </div>
